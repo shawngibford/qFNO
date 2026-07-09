@@ -1,0 +1,49 @@
+name = "QFNO"
+uuid = "b1e5f0a2-1c3d-4e6a-9f70-2a4c8d6e0f11"
+authors = ["Your Lab"]
+version = "0.1.0"
+
+[deps]
+# --- Classical FNO baseline ---
+NeuralOperators = "ea5c82af-86e5-48da-8ee1-382d6ad7af4b"
+Lux = "b2108857-7c20-44ae-9111-449ecde12c47"
+# --- Quantum spectral layer ---
+Yao = "5872b779-8223-45c4-93cf-cbd9d51a3e78"
+YaoBlocks = "418bc28f-b43b-5e0b-a6e7-61bbc1a2c1df"
+# --- Autodiff / training ---
+Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
+Optimisers = "3bd65402-5787-11e9-1adc-39752487f4e2"
+ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
+# --- Numerics / data ---
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc430ac2a7e"
+MAT = "23992714-dd62-5051-b70f-ba57cb901cac"
+NPZ = "15e1cf62-19b3-5cfa-8e77-841668bca605"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+# --- Config / logging / plotting ---
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+
+[compat]
+julia = "1.10"
+# Bounds chosen for the 1.10 LTS line; the bootstrap resolves an exact
+# Manifest.toml against these on first run. Loosen a bound if resolution fails.
+NeuralOperators = "0.5, 0.6"
+Lux = "0.5, 1"
+Yao = "0.8, 0.9"
+YaoBlocks = "0.13, 0.14"
+Zygote = "0.6"
+Optimisers = "0.3, 0.4"
+ChainRulesCore = "1"
+FFTW = "1"
+HDF5 = "0.16, 0.17"
+MAT = "0.10"
+NPZ = "0.4"
+JLD2 = "0.4, 0.5"
+CairoMakie = "0.11, 0.12, 0.13"
+ProgressMeter = "1"
