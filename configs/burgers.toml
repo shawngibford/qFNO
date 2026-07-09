@@ -1,0 +1,27 @@
+# Head-to-head config: classical FNO vs hybrid quantum FNO on 1D Burgers.
+# Spatial grid is forced to 2^n so the quantum amplitude encoding is exact.
+
+[data]
+dataset   = "burgers"                 # "burgers" | "darcy" | "pdebench"
+path      = "data/burgers_data_R10.mat"
+grid_size = 64                        # = 2^6 ; must be a power of two for QFNO
+ntrain    = 1000
+ntest     = 200
+
+[classical]
+ch           = 32
+modes        = 16
+width_layers = 4
+
+[quantum]
+n     = 6        # qubits ; 2^6 = 64 = grid_size
+depth = 4        # ansatz depth
+ch    = 8        # lifted channels (kept small: cost is O(ch * batch) circuit sims)
+
+[train]
+epochs    = 100
+batch     = 20
+lr        = 1e-3
+wd        = 1e-4
+seed      = 0
+log_every = 5
