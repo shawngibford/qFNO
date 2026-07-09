@@ -1,0 +1,8 @@
+.julia_local/
+Manifest.toml
+data/*.mat
+data/*.hdf5
+data/*.h5
+results/*.jld2
+results/*.png
+*.cov
